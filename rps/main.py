@@ -16,6 +16,7 @@ def save_moves(data):
 def computer_move(user_moves):
     if not user_moves:
         return random.choice(['rock', 'paper', 'scissors'])
+    
     counts = Counter(user_moves)
     most_common = counts.most_common(1)[0][0]
     counter_moves = {'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock'}
@@ -38,6 +39,7 @@ while True:
     if user_input == 'q':
         print("Thanks for playing!")
         break
+
     if user_input not in ['rock', 'paper', 'scissors']:
         print("Invalid input, try again.")
         continue
